@@ -10,11 +10,15 @@ from config import UPLOADS_FOLDER
 st.title("Upload and get a person's records")
 print("\n" * 50)
 
-if "connection" not in st.session_state and "cursor" not in st.session_state:
-    st.session_state.connection, st.session_state.cursor = get_db_connection()
+try:
+    if "connection" not in st.session_state and "cursor" not in st.session_state:
+        st.session_state.connection, st.session_state.cursor = get_db_connection()
 
-connection = st.session_state.connection
-cursor = st.session_state.cursor
+    connection = st.session_state.connection
+    cursor = st.session_state.cursor
+except Exception:
+    st.error("Database connection issue. Please check your host, username, password, or database name.")
+    st.stop()
 
 st.sidebar.title("Upload Files")
 uploaded_files = st.sidebar.file_uploader(
