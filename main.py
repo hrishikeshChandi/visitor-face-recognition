@@ -31,7 +31,7 @@ if st.sidebar.button("Upload"):
                 )
                 time_taken = time.time() - start
                 print(
-                    f"Processing uploaded files took: {time_taken:.2f}, ({len(uploaded_files)} images)"
+                    f"Processing uploaded files took: {time_taken:.2f} seconds, ({len(uploaded_files)} images)"
                 )
                 st.toast("Files uploaded successfully!")
         except Exception as e:
