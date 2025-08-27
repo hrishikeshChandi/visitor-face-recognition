@@ -120,7 +120,7 @@ streamlit run main.py
 5. `generate_embeddings.py`: Initial script to create facial embeddings from the image dataset
 6. `main.py` - The main Streamlit application that provides the web interface for uploading images, performing recognition, and displaying visitor records from the database.
 
-## Limitations
+## Important Points
 
 - **Initial Setup Requirement:** You must start with images in the dataset folder and run `generate_embeddings.py` before the app will function
 - **Concurrency:** The current implementation is not designed for high concurrency. Multiple users can interact with the Streamlit app simultaneously, but performance may degrade significantly under load, and there is a potential for race conditions when updating the shared FAISS index and embeddings files.
