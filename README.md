@@ -33,8 +33,8 @@ visitor-face-recognition/
 ├── files_handler.py        # File processing utilities
 ├── .env                    # Environment variables
 ├── requirements.txt        # Python dependencies
-├── dataset/                 # Directory for known visitor images
-└── uploads/        # Directory for temporary uploads
+├── dataset/                # Directory for known visitor images
+└── uploads/                # Directory for temporary uploads
 ```
 
 ## Setup Instructions
