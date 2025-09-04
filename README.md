@@ -73,14 +73,14 @@ EMBEDDINGS_PATH=./embeddings.npy
 ### 4. Database Setup
 
 1.  Create a MySQL database (matching the name you specified in the `.env` file)
-2.  Create a `visitors` table with the required columns. Example SQL:
+2.  Create a `visitor_request` table with the required columns. Example SQL:
 
 ```sql
-CREATE TABLE visitors (
-    REQUISITIONNO PRIMARY KEY VARCHAR(100),
+CREATE TABLE visitor_request (
+    REQUISITIONNO VARCHAR(100) PRIMARY KEY,
     VISITORNAME VARCHAR(255) NOT NULL,
     DEPARTMENT VARCHAR(255),
-    EMPLOYEEID VARCHAR(100),
+    EMPLOYEEID VARCHAR(100)  
 );
 ```
 
